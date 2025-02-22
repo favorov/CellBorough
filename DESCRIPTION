@@ -1,0 +1,20 @@
+Package: CellBorough
+Type: Package
+Title: Delaunay triangulation-based pairs of neighbours and Voronoi cells areas for spatial data
+Version: 0.1.0
+Date: 2025-02-22
+Authors@R: c(
+    person("Ludmila","Danilova",email = "ludmila.danilova@gmail.com",role=c("aut","ctb")),
+    person("Alexander","Favorov", email = "favorov@sensi.org", role=c("aut","cre"),
+        comment=c(ORCID="0000-0003-2595-1091"))
+    )
+Maintainer: Alexander Favorov <favorov@sensi.org>
+Description: Delaney triangulation-based pairs of neighbours and the areas of Voronoi cells for cell spatial data. Uses interp.
+License: Artistic-2.0
+LazyLoad: yes
+biocViews: Spatial
+Depends: R (>= 2.5.0)
+RoxygenNote: 7.3.2
+Encoding: UTF-8
+
+
