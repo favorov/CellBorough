@@ -1,6 +1,6 @@
 Package: CellBorough
 Type: Package
-Title: Delaunay triangulation-based pairs of neighbours and Voronoi cells areas for spatial data
+Title: Delaunay triangulation-based pairs of neighbours and Voronoi domian areas for spatial data
 Version: 0.1.0
 Date: 2025-02-22
 Authors@R: c(
