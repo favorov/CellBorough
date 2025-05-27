@@ -50,6 +50,7 @@ Delaunay triangulation-based pairs of neighbours
 x <- runif(50)
 y <- runif(50)
 df<-data.frame(x=x,y=y)
+neighb.tm<-delaunay.neighbours(interp::tri.mesh(x,y))
 neighb.xy<-delaunay.neighbours(x,y)
 neighb.df<-delaunay.neighbours(df)
 dfc<-data.frame(x.coord=x,y.coord=y)
