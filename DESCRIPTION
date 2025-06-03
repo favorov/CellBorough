@@ -1,4 +1,4 @@
-Package: CellBorough
+Package: cellboro
 Type: Package
 Title: Delaunay triangulation-based pairs of neighbours and Voronoi domian areas for spatial data
 Version: 0.1.0
