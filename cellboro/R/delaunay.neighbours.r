@@ -1,6 +1,6 @@
 #' @import interp
 #' @import dplyr
-#import description end 
+#import description end
 0
 
 
@@ -9,7 +9,9 @@
 #' Delaunay triangulation-based pairs of neighbours
 #'
 #' @title delaunay.neighbours: create a list of neighbouring point pairs
-#' form the point coordinates @param x could be a a numeric coordinate vector.
+#' form the point coordinates 
+#'
+#' @param x could be a a numeric coordinate vector.
 #' In this case, \code{y} parameter is required.
 #'
 #' The \code{x} patameter could be of class \code{triSht}, which is the return
@@ -23,6 +25,7 @@
 #' or by the names provided by \code{x.name} and \code{y.name})
 #' parameters to get the point coordinates.
 #'
+#' @param y second coordinate vector, required if \code{x} is a numeric vector.
 #'
 #' @return \code{data.frame}, each row is a pair of indices of neighbouring
 #' points in the input data structure.

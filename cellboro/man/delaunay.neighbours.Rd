@@ -7,19 +7,7 @@
 \alias{delaunay.neighbours.SpatialExperiment}
 \alias{delaunay.neighbours.default}
 \title{delaunay.neighbours: create a list of neighbouring point pairs
-form the point coordinates @param x could be a a numeric coordinate vector.
-In this case, \code{y} parameter is required.
-
-The \code{x} patameter could be of class \code{triSht}, which is the return
-of \code{interp::tri.mesh}
-
-If \code{x} is a \code{SpatialExperiment}, the point (cells) coordinates are
-read from \code{Xcoord} and \code{Ycood} slots.
-
-Alternatively, \code{x} is a
-data structure that can be subsetted by \code{$x} and \code{$y}
-or by the names provided by \code{x.name} and \code{y.name})
-parameters to get the point coordinates.}
+form the point coordinates}
 \usage{
 delaunay.neighbours(x, ...)
 
@@ -32,6 +20,20 @@ delaunay.neighbours(x, ...)
 \method{delaunay.neighbours}{default}(x, x.name = "x", y.name = "y", ...)
 }
 \arguments{
+\item{x}{could be a a numeric coordinate vector.
+In this case, \code{y} parameter is required.
+
+The \code{x} patameter could be of class \code{triSht}, which is the return
+of \code{interp::tri.mesh}
+
+If \code{x} is a \code{SpatialExperiment}, the point (cells) coordinates are
+read from \code{Xcoord} and \code{Ycood} slots.
+
+Alternatively, \code{x} is a
+data structure that can be subsetted by \code{$x} and \code{$y}
+or by the names provided by \code{x.name} and \code{y.name})
+parameters to get the point coordinates.}
+
 \item{y}{second coordinate vector}
 
 \item{x.name}{the field of column name to subset \code{x$x.name}, the default is "x"}
