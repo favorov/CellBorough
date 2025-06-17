@@ -10,7 +10,7 @@
 #'
 #' @title delaunay.neighbours: create a list of neighbouring point pairs
 #' form the point coordinates @param x could be a a numeric coordinate vector.
-#' #' In this case, \code{y} parameter is required.
+#' In this case, \code{y} parameter is required.
 #'
 #' The \code{x} patameter could be of class \code{triSht}, which is the return
 #' of \code{interp::tri.mesh}
