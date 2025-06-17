@@ -5,24 +5,27 @@
 
 
 #' delaunay.neighbours
-#' 
-#' Delaunay triangulation-based pairs of neighbours
-#' 
-#' @title delaunay.neighbours: create a list of neighbouring point pairs form the point coordinates
-#' @param x could be a a numeric coordinate vector. 
-#' In this case, \code{y} parameter is required. 
-#' 
-#' The \code{x} patameter could be of class \code{triSht}, that is the return of \code{interp::tri.mesh}
 #'
-#' If \code{x} is a \code{SpatialExperiment}, the point (cells) coordinates are read from 
-#' \code{Xcoord} and \code{Ycood} slots.
-#' 
-#' Alternatively, \code{x} is a 
-#' data structure that can be subsetted by \code{$x} and \code{$y} 
-#' or by the names provided by \code{x.name} and \code{y.name}) parameters to get the point coordinates.
-#' 
-#' 
-#' @return \code{data.frame}, each row is a pair of indices of neighbouring points
+#' Delaunay triangulation-based pairs of neighbours
+#'
+#' @title delaunay.neighbours: create a list of neighbouring point pairs
+#' form the point coordinates @param x could be a a numeric coordinate vector.
+#' #' In this case, \code{y} parameter is required.
+#'
+#' The \code{x} patameter could be of class \code{triSht}, which is the return
+#' of \code{interp::tri.mesh}
+#'
+#' If \code{x} is a \code{SpatialExperiment}, the point (cells) coordinates are
+#' read from \code{Xcoord} and \code{Ycood} slots.
+#'
+#' Alternatively, \code{x} is a
+#' data structure that can be subsetted by \code{$x} and \code{$y}
+#' or by the names provided by \code{x.name} and \code{y.name})
+#' parameters to get the point coordinates.
+#'
+#'
+#' @return \code{data.frame}, each row is a pair of indices of neighbouring
+#' points in the input data structure.
 #' @examples
 #' x <- runif(50)
 #' y <- runif(50)
@@ -32,7 +35,7 @@
 #' neighb.df<-delaunay.neighbours(df)
 #' dfc<-data.frame(x.coord=x,y.coord=y)
 #' neighb.dfc<-delaunay.neighbours(dfc,x.name="x.coord",y.name="y.coord")
-#' 
+#'
 
 #' @export
 delaunay.neighbours<-function(x, ...){
