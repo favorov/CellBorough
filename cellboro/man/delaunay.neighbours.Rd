@@ -36,9 +36,11 @@ parameters to get the point coordinates.}
 
 \item{y}{second coordinate vector}
 
-\item{x.name}{the field of column name to subset \code{x$x.name}, the default is "x"}
+\item{x.name}{the field of column name to subset \code{x$x.name},
+the default is "x"}
 
-\item{y.name}{the field of column name to subset \code{x$y.name}, the default is "y"}
+\item{y.name}{the field of column name to subset \code{x$y.name},
+the default is "y"}
 }
 \value{
 \code{data.frame}, each row is a pair of indices of neighbouring
