@@ -1,6 +1,6 @@
 #' @import interp
 #' @import dplyr
-#' @importFrom magrittr "%>%"
+#' @import utils
 #import description end
 0
 
@@ -40,7 +40,6 @@
 #' dfc<-data.frame(x.coord=x,y.coord=y)
 #' neighb.dfc<-delaunay.neighbours(dfc,x.name="x.coord",y.name="y.coord")
 #'
-
 #' @export
 delaunay.neighbours <- function(x, ...) {
     #get the sides of Delauneu triangles
@@ -50,6 +49,7 @@ delaunay.neighbours <- function(x, ...) {
 #' @rdname delaunay.neighbours
 #' @export
 delaunay.neighbours.triSht <- function(x, ...) {
+    utils::globalVariables(c("ind1", "ind2"))
     add_complement <- function(pairs) {
         neighb_pairs <- data.frame(pairs)
         colnames(neighb_pairs) <- c("ind1", "ind2")
