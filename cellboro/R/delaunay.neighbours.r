@@ -49,7 +49,7 @@ delaunay.neighbours <- function(x, ...) {
 #' @rdname delaunay.neighbours
 #' @export
 delaunay.neighbours.triSht <- function(x, ...) {
-    utils::globalVariables(c("ind1", "ind2"))
+    # nolint start: object_usage_linter.
     add_complement <- function(pairs) {
         neighb_pairs <- data.frame(pairs)
         colnames(neighb_pairs) <- c("ind1", "ind2")
@@ -58,7 +58,7 @@ delaunay.neighbours.triSht <- function(x, ...) {
         neighb_pairs %>%
             rbind(neighb_pairs_compl) %>%
             dplyr::arrange(ind1, ind2)
-    }
+    } # nolint end
     add_complement(x$arcs)
 }
 
