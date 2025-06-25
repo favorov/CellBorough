@@ -23,3 +23,21 @@ test_that(
         expect_true(all.equal(res_df, exp_res))
     }
 )
+test_that(
+    "delaunay.neighbours Spatial Experiment input 4 points", {
+        x <- c(1, 3, 3, 5)
+        y <- c(2, 1, 3, 2)
+        # Create a mock SpatialExperiment object
+        library(SpatialExperiment)
+        se <- SpatialExperiment::SpatialExperiment(
+            assays = list(counts = matrix(1:16, nrow = 4)),
+            colData = data.frame(Xcoord = x, Ycoord = y)
+        )
+        res_se <- delaunay.neighbours(se)
+        exp_res <- data.frame(
+            ind1 = c(1, 1, 2, 2, 2, 3, 3, 3, 4, 4),
+            ind2 = c(2, 3, 1, 3, 4, 1, 2, 4, 2, 3)
+        )
+        expect_true(all.equal(res_se, exp_res))
+    }
+)
